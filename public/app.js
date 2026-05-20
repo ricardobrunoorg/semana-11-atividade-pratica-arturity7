@@ -6,11 +6,11 @@ const dados = [
     id: 1,
     titulo: "Prefeitura Lança Novo Plano de Mobilidade Urbana",
     descricao: "Novo plano visa melhorar o transporte público e reduzir o trânsito na cidade.",
-    conteudo: "A Prefeitura apresentou nesta terça-feira um novo plano de mobilidade urbana que inclui a criação de corredores exclusivos de ônibus, ciclovias e a requalificação de vias principais. O projeto será implementado ao longo dos próximos dois anos. Especialistas em urbanismo elogiaram a iniciativa e destacaram que a cidade precisava urgentemente de uma solução integrada para o transporte. A expectativa é que o número de carros nas vias centrais diminua em até 30% após a conclusão das obras.",
+    conteudo: "A Prefeitura apresentou nesta segunda-feira um novo plano de mobilidade urbana que inclui a criação de corredores exclusivos de ônibus, ciclovias e a requalificação de vias principais. O projeto será implementado ao longo dos próximos dois anos. Especialistas em urbanismo elogiaram a iniciativa e destacaram que a cidade precisava urgentemente de uma solução integrada para o transporte. A expectativa é que o número de carros nas vias centrais diminua em até 30% após a conclusão das obras.",
     categoria: "Cidades",
     autor: "Joana Ribeiro",
     data: "2025-03-30",
-    imagem: "img/mobilidade.jpg"
+    imagem: "https://picsum.photos/seed/mobilidade/600/400"
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const dados = [
     categoria: "Tecnologia",
     autor: "Carlos Mendes",
     data: "2025-03-28",
-    imagem: "img/tecnologia_6g.jpg"
+    imagem: "https://picsum.photos/seed/tecnologia/600/400"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const dados = [
     categoria: "Cultura",
     autor: "Ana Clara Silva",
     data: "2025-03-27",
-    imagem: "img/festival_musica.jpg"
+    imagem: "https://picsum.photos/seed/festival/600/400"
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const dados = [
     categoria: "Meio Ambiente",
     autor: "Rafael Souza",
     data: "2025-03-25",
-    imagem: "img/parque.jpg"
+    imagem: "https://picsum.photos/seed/parque/600/400"
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const dados = [
     categoria: "Educação",
     autor: "Mariana Lima",
     data: "2025-03-22",
-    imagem: "img/robotica.jpg"
+    imagem: "https://picsum.photos/seed/robotica/600/400"
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const dados = [
     categoria: "Esportes",
     autor: "Pedro Alves",
     data: "2025-03-20",
-    imagem: "img/futebol.jpg"
+    imagem: "https://picsum.photos/seed/futebol/600/400"
   }
 ];
 
@@ -98,7 +98,7 @@ function montarHomePage() {
     // Preenche o HTML interno do card
     card.innerHTML = `
       <a href="detalhes.html?id=${noticia.id}">
-        <img src="${noticia.imagem}" alt="${noticia.titulo}" onerror="this.src='img/placeholder.jpg'" />
+        <img src="${noticia.imagem}" alt="${noticia.titulo}" />
       </a>
       <div class="card-body">
         <span class="card-categoria">${noticia.categoria}</span>
@@ -155,7 +155,6 @@ function montarPaginaDetalhes() {
         src="${noticia.imagem}"
         alt="${noticia.titulo}"
         class="detalhe-imagem"
-        onerror="this.src='img/placeholder.jpg'"
       />
       <p class="detalhe-descricao">${noticia.descricao}</p>
       <p class="detalhe-conteudo">${noticia.conteudo}</p>

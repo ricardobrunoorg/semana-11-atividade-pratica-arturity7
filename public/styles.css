@@ -1,0 +1,293 @@
+/* ============================================================
+   VARIÁVEIS DE COR E FONTE
+   ============================================================ */
+:root {
+  --cor-fundo: #f4f4f2;
+  --cor-branco: #ffffff;
+  --cor-primaria: #c0392b;       /* vermelho jornalístico */
+  --cor-primaria-hover: #a93226;
+  --cor-texto: #1a1a1a;
+  --cor-texto-suave: #555;
+  --cor-borda: #ddd;
+  --cor-header-bg: #1a1a1a;
+  --cor-header-texto: #ffffff;
+  --fonte-titulo: 'Georgia', serif;
+  --fonte-corpo: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --raio: 8px;
+}
+
+/* ============================================================
+   RESET E BASE
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+  background-color: var(--cor-header-bg);
+  color: var(--cor-header-texto);
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header-tag {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+
+.header-sub {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+main {
+  max-width: 1100px;
+  margin: 36px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.section-title {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--cor-primaria);
+  display: inline-block;
+}
+
+/* ============================================================
+   GRID DE CARDS (home-page)
+   ============================================================ */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ============================================================
+   CARD INDIVIDUAL
+   ============================================================ */
+.card {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.card-categoria {
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--cor-primaria);
+}
+
+.card-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.card-titulo a:hover {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+.card-descricao {
+  font-size: 0.88rem;
+  color: var(--cor-texto-suave);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.card-rodape {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #999;
+  border-top: 1px solid var(--cor-borda);
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+/* ============================================================
+   BOTÃO VOLTAR (detalhes.html)
+   ============================================================ */
+.btn-voltar {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+/* ============================================================
+   PÁGINA DE DETALHES
+   ============================================================ */
+.detalhe {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.detalhe-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.9rem;
+  line-height: 1.3;
+  margin: 10px 0 14px;
+}
+
+.detalhe-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 20px;
+}
+
+.detalhe-imagem {
+  border-radius: var(--raio);
+  height: 320px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.detalhe-descricao {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--cor-texto-suave);
+  border-left: 4px solid var(--cor-primaria);
+  padding-left: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.detalhe-conteudo {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--cor-texto);
+}
+
+/* ============================================================
+   MENSAGEM DE ERRO
+   ============================================================ */
+.erro {
+  text-align: center;
+  color: var(--cor-primaria);
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background-color: var(--cor-header-bg);
+  color: #888;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.82rem;
+  margin-top: auto;
+}
+
+/* ============================================================
+   RESPONSIVIDADE (telas menores)
+   ============================================================ */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .detalhe {
+    padding: 20px;
+  }
+
+  .detalhe-titulo {
+    font-size: 1.4rem;
+  }
+
+  .detalhe-imagem {
+    height: 200px;
+  }
+}

@@ -6,7 +6,7 @@ const dados = [
     id: 1,
     titulo: "Prefeitura Lança Novo Plano de Mobilidade Urbana",
     descricao: "Novo plano visa melhorar o transporte público e reduzir o trânsito na cidade.",
-    conteudo: "A Prefeitura apresentou nesta segunda-feira um novo plano de mobilidade urbana que inclui a criação de corredores exclusivos de ônibus, ciclovias e a requalificação de vias principais. O projeto será implementado ao longo dos próximos dois anos. Especialistas em urbanismo elogiaram a iniciativa e destacaram que a cidade precisava urgentemente de uma solução integrada para o transporte. A expectativa é que o número de carros nas vias centrais diminua em até 30% após a conclusão das obras.",
+    conteudo: "A Prefeitura apresentou nesta terça-feira um novo plano de mobilidade urbana que inclui a criação de corredores exclusivos de ônibus, ciclovias e a requalificação de vias principais. O projeto será implementado ao longo dos próximos dois anos. Especialistas em urbanismo elogiaram a iniciativa e destacaram que a cidade precisava urgentemente de uma solução integrada para o transporte. A expectativa é que o número de carros nas vias centrais diminua em até 30% após a conclusão das obras.",
     categoria: "Cidades",
     autor: "Joana Ribeiro",
     data: "2025-03-30",
